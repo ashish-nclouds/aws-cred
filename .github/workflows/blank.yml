@@ -9,7 +9,7 @@ jobs:
     - name: Assume Role
       uses: ./
       env:
-        ROLE_ARN: arn:aws:iam::695292474035:role/ec2-admin
+        ROLE_ARN: arn:aws:iam::259541731109:role/git-role
         ROLE_SESSION_NAME: testing
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
