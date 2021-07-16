@@ -4,6 +4,13 @@ role_arn=$ROLE_ARN
 role_session_name=$ROLE_SESSION_NAME
 duration=${DURATION_SECONDS:-3600}
 
+aws_access_key=$AWS_ACCESS_KEY_ID
+aws_secret_key=$AWS_SECRET_ACCESS_KEY
+
+aws configure set default.region us-east-1
+aws configure set aws_access_key_id $aws_access_key
+aws configure set aws_secret_access_key $aws_secret_key
+
 creds=$(aws sts assume-role \
   --role-arn $role_arn \
   --role-session-name $role_session_name \
