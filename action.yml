@@ -4,19 +4,14 @@ description: 'An action to use IAM user credentials to assume a role through STS
 
 outputs:
   aws_access_key_id:
-  description: 'test'
   value: ${{ steps.tt1.outputs.AWS_ACCESS_KEY_ID }}
 
 runs:
   using: 'docker'
   image: 'Dockerfile'
-
-runs:
-  using: "composite"
   steps:
     - id: tt1
       run: "echo ::set-output name=AWS_ACCESS_KEY_ID::$aws_access_key_id"
-      shell: bash
 
 branding:
   icon: 'users'
