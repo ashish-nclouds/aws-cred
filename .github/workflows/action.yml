@@ -15,6 +15,4 @@ jobs:
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         # Optional: Defaults to 3600
         DURATION_SECONDS: 1200
-    - name: Identity Check
-      run: |
-        aws sts get-caller-identity
+        ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
