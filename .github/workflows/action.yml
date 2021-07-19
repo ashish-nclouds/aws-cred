@@ -4,17 +4,17 @@ jobs:
   assume-role:
     name: Assume Role
     runs-on: ubuntu-latest
+      
     steps:
     - uses: actions/checkout@main
     - name: Assume Role
+      id: key
       uses: ./
       env:
-        ROLE_ARN: arn:aws:iam::259541731109:role/git-role
+        ROLE_ARN: arn:aws:iam::259541731109:role/test-git-role
         ROLE_SESSION_NAME: testing
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         # Optional: Defaults to 3600
         DURATION_SECONDS: 1200
-    - name: Identity Check
-      run: |
-        aws sts get-caller-identity
+        ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
