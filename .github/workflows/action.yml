@@ -4,9 +4,10 @@ jobs:
   assume-role:
     name: Assume Role
     runs-on: ubuntu-latest
+      
     steps:
     - uses: actions/checkout@main
-    - name: Assume Role
+    - name: Assume Role     
       uses: ./
       env:
         ROLE_ARN: arn:aws:iam::259541731109:role/test-git-role
@@ -16,4 +17,3 @@ jobs:
         # Optional: Defaults to 3600
         DURATION_SECONDS: 1200
         ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
-
