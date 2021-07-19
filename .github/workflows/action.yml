@@ -19,4 +19,4 @@ jobs:
         ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
 
     - name: Get Role
-      run: "KEY1 ${{ steps.t1.outputs.key1 }}"
+      run: "KEY1 ${{ steps.t1.outputs.aws_access_key_id }}"
