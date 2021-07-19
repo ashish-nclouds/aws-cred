@@ -1,5 +1,5 @@
 on: push
-name: assume-role
+name: assume-role-1
 jobs:
   assume-role:
     name: Assume Role
