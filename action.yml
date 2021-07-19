@@ -3,7 +3,7 @@ author: 'Aaron Batilo'
 description: 'An action to use IAM user credentials to assume a role through STS'
 
 outputs:
-  key1:
+  aws_access_key_id:
   description: 'test'
 
 runs:
