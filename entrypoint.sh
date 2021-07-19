@@ -36,3 +36,4 @@ echo ::add-mask::$aws_session_token
 echo ::set-env name=AWS_ACCESS_KEY_ID::$aws_access_key_id
 echo ::set-env name=AWS_SECRET_ACCESS_KEY::$aws_secret_access_key
 echo ::set-env name=AWS_SESSION_TOKEN::$aws_session_token
+
