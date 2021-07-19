@@ -17,3 +17,6 @@ jobs:
         # Optional: Defaults to 3600
         DURATION_SECONDS: 1200
         ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
+
+    - name: Get Role
+      run: "KEY1 ${{ steps.t1.outputs.key1 }}"
