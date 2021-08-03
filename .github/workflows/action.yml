@@ -8,7 +8,11 @@ jobs:
     steps:
     - uses: actions/checkout@main
     - name: Assume Role
+<<<<<<< HEAD
       id: key
+=======
+      id: t1
+>>>>>>> main
       uses: ./
       env:
         ROLE_ARN: arn:aws:iam::259541731109:role/test-git-role
@@ -17,4 +21,8 @@ jobs:
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         # Optional: Defaults to 3600
         DURATION_SECONDS: 1200
+<<<<<<< HEAD
         ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
+=======
+        #ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
+>>>>>>> main
